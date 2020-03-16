@@ -7,7 +7,7 @@ script:
     - docker run -e CI=true abdessamadrajd/react-app npm run test -- --coverage
 deploy: 
     provider: elasticbeanstalk
-    acces_key_id: $AWS_ACCESS_KEY
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key:
         secure: "$AWS_SECRET_KEY"
     region: us-east-2
