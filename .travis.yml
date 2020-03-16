@@ -9,14 +9,13 @@ script:
   - docker run -e CI=true abdessamadrajd/react-app npm run test
 
 deploy:
-  provider: elasticbeanstalk
-  region: "ap-south-1"
-  app: "docker-app"
-  env: "Dockerenv"
-  bucket_name: "elasticbeanstalk-ap-south-1-722066113941"
-  bucket_path: "docker-app"
-  access_key_id: "AKIA2QHT6QWK3GEGOXNT"
-  secret_access_key:
-    secure: "70\+acwFYTTloUmFglozZ2WnREvPm5BdexrqJTMX3"
-on:
-  branch: master
+    provider: elasticbeanstalk
+    region: "ap-south-1"
+    app: "docker-app"
+    env: "Dockerenv"
+    bucket_name: "elasticbeanstalk-ap-south-1-722066113941"
+    bucket_path: "docker-app"
+    on:
+        branch: master
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key: "$AWS_SECRET_KEY"
