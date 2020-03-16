@@ -7,7 +7,9 @@ script:
     - docker run -e CI=true abdessamadrajd/react-app npm run test -- --coverage
 deploy:
     provider: elasticbeanstalk
-
+    access_key_id: "AKIA2QHT6QWKV72XCT6B"
+    secret_access_key:
+        secure: "Fv3WEydfw9EjZr5dL7bnYLHP/+jXBmJ6d78uUF3wc"
     app: docker-react
     env: DockerReact-env
     bucket_name: "elasticbeanstalk-us-east-2-722066113941"
